@@ -11,7 +11,7 @@ export const BrushUnderline = ({ className = "" }) => {
           boxShadow: '0 0 4px rgba(59, 130, 246, 0.5)'
         }}
         transition={{
-          duration: 0.8,
+          duration: 3,
           ease: [0.16, 1, 0.3, 1],
         }}
       >
