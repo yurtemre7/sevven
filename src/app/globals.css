@@ -14,6 +14,39 @@
   --input: #E8E2D9; /* Input background */
   --ring: #D4A76A; /* Focus ring */
   --hover: #E8A87C; /* Warm orange for hover states */
+  
+  /* Custom hover underline */
+  --underline-height: 2px;
+  --underline-color: var(--primary);
+}
+
+/* Custom hover underline effect */
+a {
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: var(--underline-height);
+  bottom: -2px;
+  left: 0;
+  background-color: var(--underline-color);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+a:hover {
+  color: var(--primary);
 }
 
 .dark {
