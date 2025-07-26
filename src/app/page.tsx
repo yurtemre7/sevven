@@ -19,10 +19,9 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
-      <header className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center
-            ">
+      <header className="relative overflow-hidden h-screen flex items-center">
+        <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
             <motion.h1 
               className="text-5xl md:text-7xl font-bold mb-6"
               initial={{ opacity: 0, y: 20 }}
@@ -87,7 +86,7 @@ export default function Home() {
             ].map((service, index) => (
               <motion.div
                 key={index}
-                className="bg-background p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                className="bg-background p-8 rounded-lg border border-transparent hover:border-blue-600/50 transition-all duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
