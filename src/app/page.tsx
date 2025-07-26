@@ -69,7 +69,7 @@ export default function Home() {
             >
               <a
                 href="mailto:kontakt@sevven.de"
-                className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-md text-white md:py-4 md:text-lg md:px-10 transition-colors"
+                className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-md md:py-4 md:text-lg md:px-10 transition-colors"
               >
                 <Mail className="mr-2 h-5 w-5" />
                 Kontakt aufnehmen
@@ -84,43 +84,43 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">Unsere Leistungen</h2>
-            <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+            <div className="w-24 h-1 mx-auto"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: <Code className="h-12 w-12 text-blue-600" />,
+                icon: <Code className="h-12 w-12 text-primary" />,
                 title: "CI/CD & App Store Deployment",
                 description:
                   "Professionelle Konfiguration von Build-Pipelines für automatische Veröffentlichung im Play Store und App Store mit fastlane.",
               },
               {
-                icon: <Lightbulb className="h-12 w-12 text-blue-600" />,
+                icon: <Lightbulb className="h-12 w-12 text-primary" />,
                 title: "Flutter Updates & Modernisierung",
                 description:
                   "Sichere Migration auf die neueste Flutter-Version und Aktualisierung aller Abhängigkeiten.",
               },
               {
-                icon: <Smartphone className="h-12 w-12 text-blue-600" />,
+                icon: <Smartphone className="h-12 w-12 text-primary" />,
                 title: "Code-Refactoring & Best Practices",
                 description:
                   "Optimierung Ihrer Codebasis nach aktuellen Best Practices für bessere Wartbarkeit und Performance.",
               },
               {
-                icon: <Gauge className="h-12 w-12 text-blue-600" />,
+                icon: <Gauge className="h-12 w-12 text-primary" />,
                 title: "Performance-Optimierung",
                 description:
                   "Identifizierung und Behebung von Engpässen in Ladezeiten und API-Implementierungen.",
               },
               {
-                icon: <ShieldCheck className="h-12 w-12 text-blue-600" />,
+                icon: <ShieldCheck className="h-12 w-12 text-primary" />,
                 title: "Sicherheitsaudit",
                 description:
                   "Umfassende Sicherheitsanalyse Ihrer App mit Fokus auf Datenschutz und App-Sicherheit.",
               },
               {
-                icon: <LifeBuoy className="h-12 w-12 text-blue-600" />,
+                icon: <LifeBuoy className="h-12 w-12 text-primary" />,
                 title: "Support & Wartung",
                 description:
                   "Zuverlässiger Langzeitsupport und kontinuierliche Wartung Ihrer Flutter-Anwendung.",

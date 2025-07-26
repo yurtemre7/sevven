@@ -4,7 +4,7 @@ export const BrushUnderline = ({ className = "" }) => {
   return (
     <div className={`relative ${className}`} style={{ height: '4px', width: '100%' }}>
       <motion.div 
-        className="absolute bottom-0 left-0 right-0 h-full bg-blue-600 rounded-full"
+        className="absolute bottom-0 left-0 right-0 h-full bg-[var(--primary)] rounded-full"
         initial={{ scaleX: 0, transformOrigin: 'left' }}
         animate={{ 
           scaleX: 1,
@@ -16,10 +16,10 @@ export const BrushUnderline = ({ className = "" }) => {
         }}
       >
         <motion.div 
-          className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full"
+          className="absolute inset-0 bg-gradient-to-r from-[var(--primary)] to-[var(--primary)] rounded-full"
           initial={{ opacity: 0.8 }}
           animate={{ 
-            opacity: [0.8, 1, 0.8],
+            opacity: [0.8, 1, 0.8], 
           }}
           transition={{
             duration: 3,

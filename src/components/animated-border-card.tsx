@@ -1,36 +1,28 @@
-'use client';
+  'use client';
 
-import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+  import { motion } from 'framer-motion';
 
-interface AnimatedBorderCardProps {
-  children: React.ReactNode;
-  className?: string;
-}
+  interface AnimatedBorderCardProps {
+    children: React.ReactNode;
+    className?: string;
+  }
 
 export const AnimatedBorderCard = ({ children, className = '' }: AnimatedBorderCardProps) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: false, amount: 0.1 });
-
   return (
     <div 
-      ref={ref} 
-      className={`relative rounded-xl ${className}`}
+      className={`relative rounded-xl ${className} hover:text-[#DAA520]`}
     >
       <motion.div 
-        className="absolute inset-0 rounded-xl border-2 border-transparent"
-        initial={{ borderColor: 'transparent' }}
-        animate={{ 
-          borderColor: isInView ? '#3b82f6' : 'transparent',
-        }}
+        className="absolute inset-0 rounded-xl border-2"
+        whileHover={{ borderColor: '#DAA520' }}
         transition={{
-          duration: 0.5,
+          duration: 0.3,
           ease: 'easeInOut'
         }}
       />
       
       <div 
-        className="relative bg-background rounded-xl p-6 h-full transition-all duration-300 hover:scale-[1.02] hover:shadow-lg border border-border"
+        className="relative bg-background rounded-xl p-6 h-full transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
       >
         {children}
       </div>
