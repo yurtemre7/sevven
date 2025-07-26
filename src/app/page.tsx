@@ -13,6 +13,7 @@ import {
   Smartphone,
 } from "lucide-react";
 import { BrushUnderline } from "@/components/brush-underline";
+import { AnimatedBorderCard } from "@/components/animated-border-card";
 
 export default function Home() {
   const [isMounted, setIsMounted] = useState(false);
@@ -124,14 +125,7 @@ export default function Home() {
                   "Zuverlässiger Langzeitsupport und kontinuierliche Wartung Ihrer Flutter-Anwendung.",
               },
             ].map((service, index) => (
-              <motion.div
-                key={index}
-                className="p-6 rounded-xl transition-all hover:scale-[1.02] bg-background border border-border hover:border-primary/30 hover:shadow-lg"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
-              >
+              <AnimatedBorderCard key={index} className="overflow-hidden">
                 <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-primary/10 text-primary mb-4">
                   {service.icon}
                 </div>
@@ -139,7 +133,7 @@ export default function Home() {
                   {service.title}
                 </h3>
                 <p className="text-muted-foreground">{service.description}</p>
-              </motion.div>
+              </AnimatedBorderCard>
             ))}
           </div>
         </div>
