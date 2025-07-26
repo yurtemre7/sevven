@@ -13,11 +13,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'sevven - Flutter App Entwicklung',
   description: 'Professionelle Flutter App Entwicklung aus Deutschland',
-  metadataBase: new URL('https://sevven.dev'),
+  metadataBase: new URL('https://sevven.de'),
   openGraph: {
     title: 'sevven - Flutter App Entwicklung',
     description: 'Professionelle Flutter App Entwicklung aus Deutschland',
-    url: 'https://sevven.dev',
+    url: 'https://sevven.de',
     siteName: 'sevven',
     locale: 'de_DE',
     type: 'website',
