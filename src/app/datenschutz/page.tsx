@@ -71,7 +71,7 @@ export default function Datenschutz() {
             </p>
             <p>
               Telefon: +49 177 9214352<br />
-              E-Mail: <a href="mailto:kontakt@sevven.dev" className="text-blue-600 hover:underline">kontakt@sevven.dev</a>
+              E-Mail: <a href="mailto:kontakt@sevven.de" className="text-blue-600 hover:underline">kontakt@sevven.de</a>
             </p>
           </div>
 

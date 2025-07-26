@@ -33,7 +33,7 @@ export default function Impressum() {
             <div>
               <h3 className="text-xl font-medium mb-2">Kontakt</h3>
               <p>Telefon: +49 177 9214352</p>
-              <p>E-Mail: <a href="mailto:kontakt@sevven.dev" className="text-blue-600 hover:underline">kontakt@sevven.dev</a></p>
+              <p>E-Mail: <a href="mailto:kontakt@sevven.de" className="text-blue-600 hover:underline">kontakt@sevven.de</a></p>
             </div>
             
             {/* NOT YET A BUSINESS */}
