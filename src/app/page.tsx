@@ -3,7 +3,15 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Code, Lightbulb, Mail, Smartphone } from "lucide-react";
+import {
+  Code,
+  Gauge,
+  LifeBuoy,
+  Lightbulb,
+  Mail,
+  ShieldCheck,
+  Smartphone,
+} from "lucide-react";
 
 export default function Home() {
   const [isMounted, setIsMounted] = useState(false);
@@ -29,7 +37,9 @@ export default function Home() {
               transition={{ duration: 0.5 }}
             >
               <span className="text-primary">sevven</span>{" "}
-              <span className="text-foreground/80">- Apps, die funktionieren</span>
+              <span className="text-foreground/80">
+                - Flutter-Apps optimieren & skalieren
+              </span>
             </motion.h1>
 
             <motion.p
@@ -38,9 +48,9 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              Professionelle Flutter-Entwicklung aus Deutschland. Wir bauen
-              moderne, plattformübergreifende Apps mit Leidenschaft und 5+
-              Jahren Erfahrung.
+              Wir helfen Unternehmen mit bestehenden Flutter-Apps, ihre
+              Anwendungen zu optimieren, zu warten und auf die nächste Stufe zu
+              heben. 5+ Jahre Erfahrung im professionellen Flutter-Einsatz.
             </motion.p>
 
             <motion.div
@@ -50,7 +60,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <a
-                href="mailto:kontakt@sevven.dev?subject=Anfrage%20zur%20App-Entwicklung&body=Hallo%20sevven%20Team,%0D%0A%0D%20Ich%20interessiere%20mich%20f%C3%BCr%20eine%20Beratung%20zu%20meiner%20App-Idee.%0D%0A%0D%20Kontaktdaten:%0D%20Name:%0D%20Firma:%0D%20Telefon:%0D%0A%0D%20Kurzbeschreibung%20des%20Projekts:%0D%0A%0D%0A"
+                href="mailto:kontakt@sevven.de"
                 className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10 transition-colors"
               >
                 <Mail className="mr-2 h-5 w-5" />
@@ -69,25 +79,43 @@ export default function Home() {
             <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 icon: <Code className="h-12 w-12 text-blue-600" />,
-                title: "Individuelle App-Entwicklung",
+                title: "CI/CD & App Store Deployment",
                 description:
-                  "Maßgeschneiderte Flutter-Anwendungen, die genau auf Ihre Anforderungen zugeschnitten sind.",
+                  "Professionelle Konfiguration von Build-Pipelines für automatische Veröffentlichung im Play Store und App Store mit fastlane.",
               },
               {
                 icon: <Lightbulb className="h-12 w-12 text-blue-600" />,
-                title: "Modernisierung",
+                title: "Flutter Updates & Modernisierung",
                 description:
-                  "Wir atmen neuen Leben in Ihre veralteten Anwendungen mit modernen Technologien.",
+                  "Sichere Migration auf die neueste Flutter-Version und Aktualisierung aller Abhängigkeiten.",
               },
               {
                 icon: <Smartphone className="h-12 w-12 text-blue-600" />,
-                title: "Support & Beratung",
+                title: "Code-Refactoring & Best Practices",
                 description:
-                  "Fachkundige Beratung und zuverlässiger Support für Ihr laufendes Projekt.",
+                  "Optimierung Ihrer Codebasis nach aktuellen Best Practices für bessere Wartbarkeit und Performance.",
+              },
+              {
+                icon: <Gauge className="h-12 w-12 text-blue-600" />,
+                title: "Performance-Optimierung",
+                description:
+                  "Identifizierung und Behebung von Engpässen in Ladezeiten und API-Implementierungen.",
+              },
+              {
+                icon: <ShieldCheck className="h-12 w-12 text-blue-600" />,
+                title: "Sicherheitsaudit",
+                description:
+                  "Umfassende Sicherheitsanalyse Ihrer App mit Fokus auf Datenschutz und App-Sicherheit.",
+              },
+              {
+                icon: <LifeBuoy className="h-12 w-12 text-blue-600" />,
+                title: "Support & Wartung",
+                description:
+                  "Zuverlässiger Langzeitsupport und kontinuierliche Wartung Ihrer Flutter-Anwendung.",
               },
             ].map((service, index) => (
               <motion.div
@@ -101,7 +129,9 @@ export default function Home() {
                 <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-primary/10 text-primary mb-4">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-foreground">{service.title}</h3>
+                <h3 className="text-xl font-semibold mb-2 text-foreground">
+                  {service.title}
+                </h3>
                 <p className="text-muted-foreground">{service.description}</p>
               </motion.div>
             ))}
@@ -114,11 +144,11 @@ export default function Home() {
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-8 text-foreground">Kontakt</h2>
           <p className="text-lg mb-8 max-w-2xl mx-auto text-muted-foreground">
-            Sie haben ein Projekt, das Sie umsetzen möchten? Lassen Sie uns
+            Sie haben ein Projekt, das Sie optimieren möchten? Lassen Sie uns
             darüber sprechen!
           </p>
           <a
-            href="mailto:kontakt@sevven.dev?subject=Anfrage%20zur%20App-Entwicklung&body=Hallo%20sevven%20Team,%0D%0A%0D%0AIch%20interessiere%20mich%20f%C3%BCr%20eine%20Beratung%20zu%20meinem%20App-Projekt.%0D%0A%0D%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen"
+            href="mailto:kontakt@sevven.de"
             className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-md text-primary-foreground bg-accent hover:bg-hover transition-colors duration-200 hover:shadow-lg"
           >
             <Mail className="w-5 h-5 mr-2" />
@@ -131,22 +161,28 @@ export default function Home() {
       <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-border bg-background/50">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-foreground">sevven</h3>
+            <h3 className="text-lg font-semibold mb-4 text-foreground">
+              sevven
+            </h3>
             <p className="text-muted-foreground text-sm">
               Professionelle Flutter-Entwicklung aus Deutschland
             </p>
           </div>
           <div>
-            <h4 className="text-sm font-medium mb-4 text-foreground uppercase tracking-wider">Kontakt</h4>
-            <a 
-              href="mailto:kontakt@sevven.dev" 
+            <h4 className="text-sm font-medium mb-4 text-foreground uppercase tracking-wider">
+              Kontakt
+            </h4>
+            <a
+              href="mailto:kontakt@sevven.de"
               className="text-muted-foreground hover:text-foreground transition-colors text-sm block mb-2"
             >
-              kontakt@sevven.dev
+              kontakt@sevven.de
             </a>
           </div>
           <div>
-            <h4 className="text-sm font-medium mb-4 text-foreground uppercase tracking-wider">Rechtliches</h4>
+            <h4 className="text-sm font-medium mb-4 text-foreground uppercase tracking-wider">
+              Rechtliches
+            </h4>
             <div className="flex flex-col space-y-2">
               <Link
                 href="/impressum"
