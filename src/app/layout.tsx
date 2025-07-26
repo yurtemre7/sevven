@@ -1,23 +1,31 @@
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
-import { ThemeProvider } from '@/components/theme-provider';
+import { ThemeProvider } from 'next-themes';
+import { ThemeToggle } from '@/components/theme-toggle';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
-  title: 'sevven - Flutter App Entwicklung aus Deutschland',
-  description: 'Professionelle Flutter App Entwicklung für Unternehmen. Wir bauen moderne, plattformübergreifende Anwendungen mit 5+ Jahren Branchenerfahrung.',
-  keywords: ['Flutter', 'App Entwicklung', 'Mobile Apps', 'Deutschland', 'Unternehmenssoftware', 'Cross-Platform'],
-  authors: [{ name: 'sevven' }],
+  title: 'sevven - Flutter App Entwicklung',
+  description: 'Professionelle Flutter App Entwicklung aus Deutschland',
   metadataBase: new URL('https://sevven.dev'),
   openGraph: {
     title: 'sevven - Flutter App Entwicklung',
-    description: 'Professionelle Flutter App Entwicklung für Unternehmen aus Deutschland',
+    description: 'Professionelle Flutter App Entwicklung aus Deutschland',
     url: 'https://sevven.dev',
     siteName: 'sevven',
     locale: 'de_DE',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'sevven - Flutter App Entwicklung',
+    description: 'Professionelle Flutter App Entwicklung aus Deutschland',
   },
 };
 
@@ -46,6 +54,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <div className="fixed top-4 right-4 z-50">
+            <ThemeToggle />
+          </div>
           {children}
         </ThemeProvider>
       </body>

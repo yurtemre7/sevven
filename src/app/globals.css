@@ -1,26 +1,43 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Light Theme */
+  --background: #F8F5F0; /* Soft warm white */
+  --foreground: #2D2D2D; /* Dark gray for text */
+  --primary: #D4A76A; /* Warm gold */
+  --primary-foreground: #1C1C1C; /* Dark text on primary */
+  --accent: #FF6F61; /* Coral accent */
+  --accent-foreground: #FFFFFF; /* White text on accent */
+  --muted: #E8E2D9; /* Light warm gray */
+  --muted-foreground: #5A5A5A; /* Medium gray for secondary text */
+  --border: #D4CEC4; /* Warm border */
+  --input: #E8E2D9; /* Input background */
+  --ring: #D4A76A; /* Focus ring */
+  --hover: #E8A87C; /* Warm orange for hover states */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  /* Dark Theme */
+  --background: #1C1C1C; /* Soft black */
+  --foreground: #F5E8D8; /* Warm beige text */
+  --primary: #DAA520; /* Golden yellow */
+  --primary-foreground: #1C1C1C; /* Dark text on primary */
+  --accent: #FF6F61; /* Muted coral */
+  --accent-foreground: #1C1C1C; /* Dark text on accent */
+  --muted: #2A2A2A; /* Dark gray */
+  --muted-foreground: #A8A29E; /* Muted text */
+  --border: #3D3D3D; /* Dark border */
+  --input: #2A2A2A; /* Input background */
+  --ring: #FF6F61; /* Focus ring */
+  --hover: #FF4500; /* Burnt orange for hover states */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  border-color: var(--border);
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
