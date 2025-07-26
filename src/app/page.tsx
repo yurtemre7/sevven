@@ -40,10 +40,7 @@ export default function Home() {
               transition={{ duration: 0.5 }}
             >
               <div className="relative inline-block">
-                <span className="relative text-primary">sevven</span>
-                <div className="absolute -bottom-1 left-0 right-0 h-1">
-                  <BrushUnderline />
-                </div>
+                <a href="/" target="_self" rel="noopener noreferrer" className="relative text-primary hover:underline transition-colors">sevven</a>
               </div>{" "}
               <span className="text-foreground/80">
                 - Flutter-Apps optimieren & skalieren
@@ -162,13 +159,13 @@ export default function Home() {
       <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-border bg-background/50">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <div className="flex items-center gap-2">
-              <Image src="/icon-192.png" alt="Logo" width={24} height={24} />
-              <h3 className="text-lg font-semibold text-foreground">
+            <div className="flex items-center gap-2 text-sm font-medium mb-4 text-foreground uppercase tracking-wider">
+              <Image src="/icon-192.png" alt="Logo" width={22} height={22} />
+              <h3 className="">
                 sevven
               </h3>
             </div>
-            <p className="text-muted-foreground text-sm">
+            <p className="text-muted-foreground hover:text-foreground transition-colors text-sm block mb-2">
               Professionelle Flutter-Entwicklung aus Deutschland
             </p>
           </div>

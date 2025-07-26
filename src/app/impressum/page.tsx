@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Impressum - sevven',
@@ -23,6 +24,7 @@ export default function Impressum() {
           
           <div className="space-y-6">
             <div>
+              <Image src="/icon-192.png" alt="Logo" width={24} height={24} />
               <h3 className="text-xl font-medium mb-2">sevven</h3>
               <p>Inhaber: Emre Yurtseven</p>
               <p>Innsbrucker Straße 47A</p>
@@ -37,11 +39,11 @@ export default function Impressum() {
             </div>
             
             {/* NOT YET A BUSINESS */}
-            {/* <div>
+            <div>
               <h3 className="text-xl font-medium mb-2">Umsatzsteuer-ID</h3>
               <p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:</p>
-              <p></p>
-            </div> */}
+              <p>NOCH KEIN UNTERNEHMEN</p>
+            </div>
 
             <div>
               <h3 className="text-xl font-medium mb-2">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
