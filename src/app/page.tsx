@@ -13,7 +13,6 @@ import {
   ShieldCheck,
   Smartphone,
 } from "lucide-react";
-import { BrushUnderline } from "@/components/brush-underline";
 import { AnimatedBorderCard } from "@/components/animated-border-card";
 
 export default function Home() {
@@ -40,7 +39,12 @@ export default function Home() {
               transition={{ duration: 0.5 }}
             >
               <div className="relative inline-block">
-                <a href="/" target="_self" rel="noopener noreferrer" className="relative text-primary hover:underline transition-colors">sevven</a>
+                <Link
+                  href="/"
+                  className="relative text-primary hover:underline transition-colors"
+                >
+                  sevven
+                </Link>
               </div>{" "}
               <span className="text-foreground/80">
                 - Flutter-Apps optimieren & skalieren
