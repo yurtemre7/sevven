@@ -12,6 +12,7 @@ import {
   ShieldCheck,
   Smartphone,
 } from "lucide-react";
+import { BrushUnderline } from "@/components/brush-underline";
 
 export default function Home() {
   const [isMounted, setIsMounted] = useState(false);
@@ -36,7 +37,12 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <span className="text-primary">sevven</span>{" "}
+              <div className="relative inline-block">
+                <span className="relative text-primary">sevven</span>
+                <div className="absolute -bottom-1 left-0 right-0 h-1">
+                  <BrushUnderline />
+                </div>
+              </div>{" "}
               <span className="text-foreground/80">
                 - Flutter-Apps optimieren & skalieren
               </span>
