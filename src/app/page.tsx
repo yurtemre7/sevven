@@ -1,11 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   Code,
   Gauge,
+  Github,
   LifeBuoy,
   Lightbulb,
   Mail,
@@ -161,9 +163,12 @@ export default function Home() {
       <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-border bg-background/50">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-foreground">
-              sevven
-            </h3>
+            <div className="flex items-center gap-2">
+              <Image src="/icon-192.png" alt="Logo" width={24} height={24} />
+              <h3 className="text-lg font-semibold text-foreground">
+                sevven
+              </h3>
+            </div>
             <p className="text-muted-foreground text-sm">
               Professionelle Flutter-Entwicklung aus Deutschland
             </p>

@@ -14,6 +14,10 @@ export const metadata: Metadata = {
   title: 'sevven - Flutter App Entwicklung',
   description: 'Professionelle Flutter App Entwicklung aus Deutschland',
   metadataBase: new URL('https://sevven.de'),
+  icons: {
+    icon: '../../favicon.ico',
+    apple: '../../apple-touch-icon.png',
+  },
   openGraph: {
     title: 'sevven - Flutter App Entwicklung',
     description: 'Professionelle Flutter App Entwicklung aus Deutschland',
