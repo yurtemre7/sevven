@@ -41,7 +41,7 @@ export default function Home() {
               <div className="relative inline-block">
                 <Link
                   href="/"
-                  className="relative text-primary hover:underline transition-colors"
+                  className="relative hover:underline"
                 >
                   sevven
                 </Link>
@@ -70,7 +70,7 @@ export default function Home() {
             >
               <a
                 href="mailto:kontakt@sevven.de"
-                className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-md md:py-4 md:text-lg md:px-10 transition-colors"
+                className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-md md:py-4 md:text-lg md:px-10"
               >
                 <Mail className="mr-2 h-5 w-5" />
                 Kontakt aufnehmen
@@ -151,7 +151,7 @@ export default function Home() {
           </p>
           <a
             href="mailto:kontakt@sevven.de"
-            className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-md text-primary-foreground bg-accent hover:bg-hover transition-colors duration-200 hover:shadow-lg"
+            className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-md text-primary-foreground bg-accent hover:bg-hover duration-200 hover:shadow-lg"
           >
             <Mail className="w-5 h-5 mr-2" />
             E-Mail verfassen
@@ -169,7 +169,7 @@ export default function Home() {
                 sevven
               </h3>
             </div>
-            <p className="text-muted-foreground hover:text-foreground transition-colors text-sm block mb-2">
+            <p className="text-muted-foreground hover:text-foreground text-sm block mb-2">
               Professionelle Flutter-Entwicklung aus Deutschland
             </p>
           </div>
@@ -179,7 +179,7 @@ export default function Home() {
             </h4>
             <a
               href="mailto:kontakt@sevven.de"
-              className="text-muted-foreground hover:text-foreground transition-colors text-sm block mb-2"
+              className="text-muted-foreground hover:text-foreground text-sm block mb-2"
             >
               kontakt@sevven.de
             </a>
@@ -191,13 +191,13 @@ export default function Home() {
             <div className="flex flex-col space-y-2">
               <Link
                 href="/impressum"
-                className="text-muted-foreground hover:text-foreground transition-colors text-sm"
+                className="text-muted-foreground hover:text-foreground text-sm"
               >
                 Impressum
               </Link>
               <Link
                 href="/datenschutz"
-                className="text-muted-foreground hover:text-foreground transition-colors text-sm"
+                className="text-muted-foreground hover:text-foreground text-sm"
               >
                 Datenschutzerklärung
               </Link>
