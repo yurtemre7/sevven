@@ -1,40 +1,39 @@
-import type { Metadata, Viewport } from 'next';
-import { ThemeProvider } from 'next-themes';
-import { ThemeToggle } from '@/components/theme-toggle';
-import './globals.css';
-
+import type { Metadata, Viewport } from "next";
+import { ThemeProvider } from "next-themes";
+import { ThemeToggle } from "@/components/theme-toggle";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: 'sevven - Flutter App Entwicklung',
-  description: 'Professionelle Flutter App Entwicklung aus Deutschland',
-  metadataBase: new URL('https://sevven.yurtemre.de'),
+  title: "sevven - Flutter App Entwicklung",
+  description: "Professionelle Flutter App Entwicklung aus Deutschland",
+  metadataBase: new URL("https://sevven.yurtemre.de"),
   icons: {
-    icon: '../../favicon.ico',
-    apple: '../../apple-touch-icon.png',
+    icon: "../../favicon.ico",
+    apple: "../../apple-touch-icon.png",
   },
   openGraph: {
-    title: 'sevven - Flutter App Entwicklung',
-    description: 'Professionelle Flutter App Entwicklung aus Deutschland',
-    url: 'https://sevven.yurtemre.de',
-    siteName: 'sevven',
-    locale: 'de_DE',
-    type: 'website',
+    title: "sevven - Flutter App Entwicklung",
+    description: "Professionelle Flutter App Entwicklung aus Deutschland",
+    url: "https://sevven.yurtemre.de",
+    siteName: "sevven",
+    locale: "de_DE",
+    type: "website",
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'sevven - Flutter App Entwicklung',
-    description: 'Professionelle Flutter App Entwicklung aus Deutschland',
+    card: "summary_large_image",
+    title: "sevven - Flutter App Entwicklung",
+    description: "Professionelle Flutter App Entwicklung aus Deutschland",
   },
 };
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
-    { media: '(prefers-color-scheme: dark)', color: '#0a0a0a' },
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
   ],
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
+  maximumScale: 5,
   userScalable: true,
 };
 
@@ -44,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de">
+    <html lang="de" suppressHydrationWarning>
       <body className={`font-sans antialiased min-h-screen`}>
         <ThemeProvider
           attribute="class"
