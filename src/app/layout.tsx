@@ -1,14 +1,8 @@
 import type { Metadata, Viewport } from 'next';
-import { Inter } from 'next/font/google';
 import { ThemeProvider } from 'next-themes';
 import { ThemeToggle } from '@/components/theme-toggle';
 import './globals.css';
 
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-});
 
 export const metadata: Metadata = {
   title: 'sevven - Flutter App Entwicklung',
@@ -51,7 +45,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de" suppressHydrationWarning>
-      <body className={`${inter.variable} font-sans antialiased min-h-screen`}>
+      <body className={`font-sans antialiased min-h-screen`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
