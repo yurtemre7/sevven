@@ -7,7 +7,7 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'sevven - Flutter App Entwicklung',
   description: 'Professionelle Flutter App Entwicklung aus Deutschland',
-  metadataBase: new URL('https://sevven.de'),
+  metadataBase: new URL('https://sevven.yurtemre.de'),
   icons: {
     icon: '../../favicon.ico',
     apple: '../../apple-touch-icon.png',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'sevven - Flutter App Entwicklung',
     description: 'Professionelle Flutter App Entwicklung aus Deutschland',
-    url: 'https://sevven.de',
+    url: 'https://sevven.yurtemre.de',
     siteName: 'sevven',
     locale: 'de_DE',
     type: 'website',
@@ -44,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de" suppressHydrationWarning>
+    <html lang="de">
       <body className={`font-sans antialiased min-h-screen`}>
         <ThemeProvider
           attribute="class"

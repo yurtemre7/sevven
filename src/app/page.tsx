@@ -69,7 +69,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <a
-                href="mailto:kontakt@sevven.de"
+                href="mailto:kontakt@sevven.yurtemre.de"
                 className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-md md:py-4 md:text-lg md:px-10"
               >
                 <Mail className="mr-2 h-5 w-5" />
@@ -150,7 +150,7 @@ export default function Home() {
             darüber sprechen!
           </p>
           <a
-            href="mailto:kontakt@sevven.de"
+            href="mailto:kontakt@sevven.yurtemre.de"
             className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-md text-primary-foreground bg-accent hover:bg-hover duration-200 hover:shadow-lg"
           >
             <Mail className="w-5 h-5 mr-2" />
@@ -178,10 +178,10 @@ export default function Home() {
               Kontakt
             </h4>
             <a
-              href="mailto:kontakt@sevven.de"
+              href="mailto:kontakt@sevven.yurtemre.de"
               className="text-muted-foreground hover:text-foreground text-sm block mb-2"
             >
-              kontakt@sevven.de
+              kontakt@sevven.yurtemre.de
             </a>
           </div>
           <div>
